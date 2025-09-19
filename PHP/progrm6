@@ -1,0 +1,43 @@
+<?php
+session_start();
+
+// Check if form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $_SESSION['username'] = $_POST['username'];
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+}
+
+// If session is set, show welcome message
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : null;
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Session Example</title>
+</head>
+<body>
+
+<?php if ($username): ?>
+    <p>Welcome, <?php echo htmlspecialchars($username); ?>!</p>
+    <p><a href="?logout=true">Logout</a></p>
+<?php else: ?>
+    <form method="post">
+        <label>Enter your name:</label>
+        <input type="text" name="username" required>
+        <button type="submit">Submit</button>
+    </form>
+<?php endif; ?>
+
+<?php
+// Handle logout
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+}
+?>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Portfolio</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; }
+    header, footer { background: #333; color: #fff; text-align: center; padding: 1em; }
+    nav { background: #444; text-align: center; }
+    nav a { color: #fff; padding: 1em; display: inline-block; text-decoration: none; }
+    main { padding: 2em; }
+    .project { background: #eee; margin: 1em 0; padding: 1em; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Jeswanthika K</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <h2>My Projects</h2>
+    <div class="project">
+      <h3>Project 1</h3>
+      <p>Short description of project 1.</p>
+    </div>
+    <div class="project">
+      <h3>Project 2</h3>
+      <p>Short description of project 2.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jeswanthika K</p>
+  </footer>
+
+</body>
+</html>
